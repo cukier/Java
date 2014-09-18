@@ -1,0 +1,137 @@
+package cuki.bin;
+
+import java.util.ArrayList;
+
+import javafish.clients.opc.JOpc;
+import javafish.clients.opc.browser.JOpcBrowser;
+import javafish.clients.opc.exception.CoInitializeException;
+import javafish.clients.opc.exception.ConnectivityException;
+import javafish.clients.opc.exception.HostException;
+import javafish.clients.opc.exception.NotFoundServersException;
+import javafish.clients.opc.exception.UnableBrowseBranchException;
+import javafish.clients.opc.exception.UnableIBrowseException;
+
+public class OpcConn {
+
+	private JOpcBrowser opcBrowser = null;
+	private static int id;
+	private String serverClientHandle;
+	private String host = "localhost";
+	private String server;
+
+	public OpcConn() {
+		try {
+			JOpcBrowser.coInitialize();
+			JOpc.coInitialize();
+		} catch (CoInitializeException e) {
+			e.printStackTrace();
+		}
+		serverClientHandle = "JOPCAtos" + String.valueOf(id);
+		id++;
+	}
+
+	public void setServer(String server) {
+		this.server = server;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+	public void serverConnect() {
+		serverConnect(this.server, this.host);
+	}
+
+	public void serverConnect(String server, String host) {
+		opcBrowser = null;
+		opcBrowser = new JOpcBrowser(host, server, serverClientHandle);
+		try {
+			opcBrowser.connect();
+		} catch (ConnectivityException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void disconnect() {
+		JOpcBrowser.coUninitialize();
+		JOpc.coUninitialize();
+		opcBrowser = null;
+		System.out.println("JOpc off-line");
+	}
+
+	public String[] getAllServers(String ip) {
+		String[] retorno = null;
+
+		try {
+			retorno = JOpcBrowser.getOpcServers(ip);
+		} catch (HostException ex) {
+			ex.printStackTrace();
+		} catch (NotFoundServersException ex) {
+			ex.printStackTrace();
+		}
+		return retorno;
+	}
+
+	public String[] getBranch(String branch) throws UnableBrowseBranchException {
+		String[] retorno = null;
+
+		if (opcBrowser != null) {
+			try {
+				retorno = opcBrowser.getOpcBranch(branch);
+			} catch (UnableBrowseBranchException e) {
+				// e.printStackTrace();
+			} catch (UnableIBrowseException e) {
+				// e.printStackTrace();
+			}
+		} else {
+			System.out.println("Browser inexistente!");
+		}
+
+		return retorno;
+	}
+	
+	public String[] getIten throws UnableBrowseLeafException, UnableIBrowseException, UnableAddGroupException, UnableAddItemException, CoUninitializeException
+
+	public String[][] getAllBranches() throws UnableBrowseBranchException {
+		String[][] branches = null;
+		try {
+				branches = _getAllBranches(null, null, "");
+		} catch (UnableBrowseBranchException e) {
+//			e.printStackTrace();
+		}
+		return branches;
+	}
+
+	private String[][] _getAllBranches(ArrayList<String[]> aux,
+			String[] branches, String branch)
+			throws UnableBrowseBranchException {
+
+		String[][] retorno = null;
+		branches = null;
+		if (aux == null)
+			aux = new ArrayList<String[]>();
+
+		try {
+			branches = getBranch(branch);
+		} catch (UnableBrowseBranchException e1) {
+			// e1.printStackTrace();
+		}
+		if (branches != null) {
+			aux.add(branches);
+			for (String i : branches) {
+				try {
+					_getAllBranches(aux, branches, i);
+				} catch (UnableBrowseBranchException e) {
+					// e.printStackTrace();
+				} finally {
+					System.out.println("->" + i);
+					try {
+						String[] itens = 
+					}
+				}
+			}
+			aux.toArray(retorno);
+		}
+		return retorno;
+	}
+}

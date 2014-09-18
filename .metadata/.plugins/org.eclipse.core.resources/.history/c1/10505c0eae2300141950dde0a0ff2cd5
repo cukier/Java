@@ -1,0 +1,367 @@
+package cuki.proc;
+
+import java.util.ArrayList;
+
+import net.wimpi.modbus.ModbusException;
+import net.wimpi.modbus.ModbusIOException;
+import net.wimpi.modbus.ModbusSlaveException;
+import net.wimpi.modbus.io.ModbusSerialTransaction;
+import net.wimpi.modbus.msg.ReadMultipleRegistersRequest;
+import net.wimpi.modbus.msg.ReadMultipleRegistersResponse;
+import net.wimpi.modbus.msg.WriteMultipleRegistersRequest;
+import net.wimpi.modbus.msg.WriteSingleRegisterRequest;
+import net.wimpi.modbus.procimg.Register;
+import net.wimpi.modbus.procimg.SimpleRegister;
+import net.wimpi.modbus.util.ModbusUtil;
+
+/**
+ * Classe abstrata sincronizada de leitura e escrita em plc via modbus (Jamod)
+ * 
+ * @author cuki
+ *
+ */
+public abstract class SynchronizedAbtractMemo implements Memo {
+
+	protected ConnectionModbus m_con = null;
+
+	protected String m_port = null;
+
+	protected int m_deviceAddress = 0;
+	protected int m_qdtMemoria = 130;
+
+	protected SimpleRegister[] m_mem = null;
+
+	public final synchronized void setDeviceSize(int size)
+			throws IllegalArgumentException {
+
+		if (size <= 0) {
+			throw new IllegalArgumentException(
+					"O tamanho da mem�ria deve ser maior que zero");
+		}
+
+		m_qdtMemoria = size;
+	}
+
+	public final synchronized int[] read(int reference, int wordCount)
+			throws Exception {
+
+		m_con = new ConnectionModbus(m_port);
+
+		if (reference + wordCount > m_qdtMemoria) {
+			throw new IndexOutOfBoundsException(
+					"Tentavia de leitura fora da mem�ria");
+		}
+
+		int[] ret = null;
+
+		try {
+			m_con.open();
+		} catch (Exception e1) {
+			throw new Exception();
+		}
+
+		if (m_con.isDoorOpen()) {
+
+			ret = new int[wordCount];
+
+			ReadMultipleRegistersRequest req = new ReadMultipleRegistersRequest();
+			req.setReference(reference);
+			req.setWordCount(wordCount);
+			req.setUnitID(m_deviceAddress);
+			req.setHeadless();
+
+			ModbusSerialTransaction trans = new ModbusSerialTransaction(
+					m_con.getConection());
+			trans.setRetries(10);
+			trans.setRequest(req);
+
+			try {
+				trans.execute();
+			} catch (Exception e) {
+				throw new Exception();
+			} finally {
+				m_con.close();
+				m_con = null;
+			}
+
+			ReadMultipleRegistersResponse res = (ReadMultipleRegistersResponse) trans
+					.getResponse();
+
+			if (res != null) {
+				for (int cont = 0; cont < wordCount; cont++) {
+					ret[cont] = res.getRegisterValue(cont);
+					m_mem[cont].setValue(ret[cont]);
+				}
+			}
+		}
+
+		return ret;
+	}
+
+	public String getString(int offset, int len) {
+
+		String ret = "";
+		int[] resp = null;
+
+		try {
+			resp = read(offset, len);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		if (resp != null) {
+			StringBuffer sb = new StringBuffer();
+			for (int i : resp) {
+				byte[] b = ModbusUtil.shortToRegister((short) i);
+				if (b[1] != 0)
+					sb.append((char) b[1]);
+				else
+					break;
+				if (b[0] != 0)
+					sb.append((char) b[0]);
+				else
+					break;
+			}
+
+			ret = sb.toString();
+		}
+
+		return ret;
+	}
+
+	public float getFloat(int offset) {
+		float ret = 0f;
+
+		int[] resp = null;
+
+		try {
+			resp = read(offset, 2);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		if (resp != null) {
+			byte[] b = new byte[4];
+
+			b[0] = ModbusUtil.hiByte(resp[1]);
+			b[1] = ModbusUtil.lowByte(resp[1]);
+			b[2] = ModbusUtil.hiByte(resp[0]);
+			b[3] = ModbusUtil.lowByte(resp[0]);
+
+			ret = ModbusUtil.registersToFloat(b);
+		}
+
+		return ret;
+	}
+
+	public int getInt(int offset) {
+		int ret = 0;
+
+		int[] resp = null;
+
+		try {
+			resp = read(offset, 1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		if (resp != null)
+			ret = (int) resp[0];
+
+		return ret;
+	}
+
+	public SimpleRegister[] getRegisters() {
+		return m_mem.clone();
+	}
+
+	public boolean getBool(int reference, int index) {
+
+		if (index > 15 || index < 0) {
+			throw new IndexOutOfBoundsException("o �ndex deve ser entre 0 e 15");
+		}
+
+		boolean ret = false;
+
+		int mask = 1 << index;
+		int test = (getInt(reference) & mask) >> index;
+		ret = (test == 1);
+		return ret;
+	}
+
+	public void syncDevice() throws Exception {
+
+		int passo = 0;
+		int nrLeituras = 0;
+
+		passo = (m_qdtMemoria > 40) ? 40 : 10;
+		nrLeituras = ((int) (m_qdtMemoria / passo) + 1);
+
+		for (int i = 0; i < nrLeituras; ++i) {
+			try {
+				if (i < nrLeituras - 1)
+					read(i * passo, passo);
+				else
+					read(i * passo, m_qdtMemoria - i * passo);
+			} catch (Exception e) {
+				throw new Exception();
+			}
+		}
+
+	}
+
+	public final synchronized void send(int reference, int[] value) {
+
+		m_con = new ConnectionModbus(m_port);
+
+		if (reference + value.length > m_qdtMemoria) {
+			throw new IndexOutOfBoundsException(
+					"Tentativa de escrita fora da mem�ria");
+		}
+
+		Register[] data = new Register[value.length];
+
+		for (int cont = 0; cont < value.length; ++cont) {
+			data[cont] = new SimpleRegister();
+			data[cont].setValue(value[cont]);
+			m_mem[cont].setValue(value[cont]);
+		}
+
+		try {
+			m_con.open();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		if (m_con.isDoorOpen()) {
+			WriteMultipleRegistersRequest req = new WriteMultipleRegistersRequest();
+			req.setUnitID(m_deviceAddress);
+			req.setReference(reference);
+			req.setRegisters(data);
+
+			ModbusSerialTransaction trans = new ModbusSerialTransaction(
+					m_con.getConection());
+			trans.setRequest(req);
+
+			try {
+				trans.execute();
+			} catch (ModbusIOException e) {
+				e.printStackTrace();
+			} catch (ModbusSlaveException e) {
+				e.printStackTrace();
+			} catch (ModbusException e) {
+				e.printStackTrace();
+			} finally {
+				m_con.close();
+				m_con = null;
+			}
+		}
+	}
+
+	public void send(int reference, String str) {
+
+		if (str.length() > 20) {
+			throw new IllegalArgumentException(
+					"m�ximo n�mero de caracteres permitido: 20");
+		} else {
+
+			ArrayList<Integer> list = new ArrayList<Integer>();
+
+			int aux = 0;
+			for (int i = 0; i < str.length(); i += 2) {
+				aux = 0;
+				if (i < str.length() - 1)
+					aux = ((int) str.toCharArray()[i + 1] & 0xFF) << 8;
+				aux |= ((int) str.toCharArray()[i] & 0xFF);
+				list.add(aux);
+			}
+
+			int[] resp = new int[list.size()];
+			for (int i = 0; i < resp.length; ++i) {
+				resp[i] = (int) list.get(i);
+			}
+
+			send(reference, resp);
+		}
+	}
+
+	public void send(int reference, float value) {
+
+		byte[] aux = ModbusUtil.floatToRegisters(value);
+		int[] resp = new int[2];
+
+		for (int i = 0; i < resp.length; ++i) {
+			resp[i] = ModbusUtil.makeWord(aux[2 * i], aux[2 * i + 1]);
+		}
+
+		int[] swap = new int[2];
+		swap[0] = resp[1];
+		swap[1] = resp[0];
+
+		send(reference, swap);
+	}
+
+	public void send(int reference, int value) {
+
+		m_mem[reference].setValue(value);
+
+		m_con = new ConnectionModbus(m_port);
+
+		try {
+			m_con.open();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		if (m_con.isDoorOpen()) {
+			WriteSingleRegisterRequest req = new WriteSingleRegisterRequest();
+			req.setUnitID(m_deviceAddress);
+			req.setReference(reference);
+			req.setRegister(new SimpleRegister(value));
+
+			ModbusSerialTransaction trans = new ModbusSerialTransaction(
+					m_con.getConection());
+			trans.setRequest(req);
+			try {
+				trans.execute();
+			} catch (ModbusIOException e) {
+				e.printStackTrace();
+			} catch (ModbusSlaveException e) {
+				e.printStackTrace();
+			} catch (ModbusException e) {
+				e.printStackTrace();
+			} finally {
+				m_con.close();
+				m_con = null;
+			}
+		}
+	}
+
+	public void sendBool(int index, int reference, boolean value) {
+
+		if (index > 15 || index < 0) {
+			throw new IndexOutOfBoundsException("o �ndex deve ser entre 0 e 15");
+		}
+
+		int valor = m_mem[reference].getValue();
+
+		int mask = 1 << index;
+		if (value) {
+			valor |= mask;
+		} else {
+			mask = ~mask;
+			valor &= mask;
+		}
+
+		send(reference, valor);
+	}
+
+	public void setDeviceAddress(int addr) throws IllegalArgumentException {
+		if (addr < 0) {
+			throw new IllegalArgumentException(
+					"Endere�o do plc deve ser maior que zero");
+		} else {
+			m_deviceAddress = addr;
+		}
+	}
+}

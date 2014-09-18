@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="partida" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="partida"/>
+			<item value="parti"/>
+			<item value="27"/>
+			<item value="pico"/>
+			<item value="getfloat"/>
+			<item value="&#x09;&#x09;-&#x09;&#x09;"/>
+			<item value="-"/>
+			<item value="laminami"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="ref"/>
+			<item value="getValue"/>
+			<item value=";"/>
+			<item value="font"/>
+			<item value="plc."/>
+			<item value="atos"/>
+			<item value="pivo"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="237" key="DIALOG_WIDTH"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<item value="357" key="DIALOG_HEIGHT"/>
+		<item value="127" key="DIALOG_Y_ORIGIN"/>
+		<item value="1073" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

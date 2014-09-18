@@ -1,0 +1,38 @@
+package cuki;
+
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics2D;
+import java.awt.geom.Point2D;
+
+public class Draw {
+
+	final static int maxCharHeight = 15;
+	final static int minFontSize = 6;
+
+	FontMetrics pickFont(Graphics2D g2, String longString, int xSpace) {
+		boolean fontFits = false;
+		Font font = g2.getFont();
+		FontMetrics fontMetrics = g2.getFontMetrics();
+		int size = font.getSize();
+		String name = font.getName();
+		int style = font.getStyle();
+
+		while (!fontFits) {
+			if ((fontMetrics.getHeight() <= maxCharHeight)
+					&& (fontMetrics.stringWidth(longString) <= xSpace)) {
+				fontFits = true;
+			} else {
+				if (size <= minFontSize) {
+					fontFits = true;
+				} else {
+					g2.setFont(font = new Font(name, style, --size));
+					fontMetrics = g2.getFontMetrics();
+				}
+			}
+		}
+
+		return fontMetrics;
+	}
+
+}

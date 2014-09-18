@@ -1,0 +1,70 @@
+package cuki;
+
+import net.miginfocom.swt.MigLayout;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+
+public class SwtTest {
+
+	public static void main(final String[] args) {
+		final Display display = new Display();
+		final Shell shell = new Shell(display);
+
+		shell.setLayout(new FillLayout(SWT.VERTICAL));
+
+		final Composite cmpLabels = new Composite(shell, SWT.BORDER);
+		cmpLabels.setLayout(new MigLayout("wrap 5"));
+
+		final Label l0 = new Label(cmpLabels, SWT.NONE);
+		l0.setText("L 0");
+		final Label l1 = new Label(cmpLabels, SWT.NONE);
+		final Label l2 = new Label(cmpLabels, SWT.NONE);
+		l2.setText("L 2");
+		final Label l3 = new Label(cmpLabels, SWT.NONE);
+		final Label l4 = new Label(cmpLabels, SWT.NONE);
+		l4.setText("L 4");
+
+		final Composite cmpButtons = new Composite(shell, SWT.NONE);
+		cmpButtons.setLayout(new FillLayout());
+
+		final Button btn1 = new Button(cmpButtons, SWT.PUSH);
+		btn1.setText("Set 1");
+		btn1.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(final SelectionEvent e) {
+				l3.setText("");
+				l1.setText("Some Text");
+				cmpLabels.layout();
+				cmpLabels.redraw();
+			}
+		});
+
+		final Button btn3 = new Button(cmpButtons, SWT.PUSH);
+		btn3.setText("Set 3");
+		btn3.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(final SelectionEvent e) {
+				l1.setText("");
+				l3.setText("Some Text");
+				cmpLabels.layout();
+				cmpLabels.redraw();
+			}
+		});
+
+		shell.setSize(300, 100);
+		shell.open();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch()) {
+				display.sleep();
+			}
+		}
+		display.dispose();
+	}
+}

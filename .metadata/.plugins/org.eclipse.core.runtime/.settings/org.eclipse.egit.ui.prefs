@@ -1,0 +1,18 @@
+BranchProjectTracker__C\:\\Users\\cuki\\Desktop\\Workspace\\Clock\\.git_cuki=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="cuki">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__C\:\\Users\\cuki\\Desktop\\Workspace\\Clock\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="master">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__C\:\\Users\\cuki\\Desktop\\Workspace\\Draw\\.git_original=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="original">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__C\:\\Users\\cuki\\Desktop\\Workspace\\Draw\\.git_ponto=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="ponto">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__D\:\\Eletronica\\Java\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="master">\r\n<project>\\Jamod</project>\r\n<project>\\RemoteSystemsTempFiles</project>\r\n</projects>
+BranchProjectTracker__D\:\\Eletronica\\Java\\Clock\\.git_cuki=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="cuki">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__D\:\\Eletronica\\Java\\FileChooserDemo\\.git_1a3104534120133e97b742faf4c15ceac9abc771=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="1a3104534120133e97b742faf4c15ceac9abc771">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__D\:\\Eletronica\\Java\\FileChooserDemo\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="master">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__D\:\\Eletronica\\Java\\NewThread\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="master">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__D\:\\Eletronica\\Java\\NewThread\\.git_multi_thread=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="multi_thread">\r\n<project>/</project>\r\n</projects>
+BranchProjectTracker__D\:\\Java\\Teste\\.git_jamod=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="jamod">\r\n<project>/</project>\r\n</projects>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>bkp</message>\r\n<message>correcoes</message>\r\n<message>adicionada verifica\u00E7\u00E3o das entradas dos m\u00E9todos, novo m\u00E9todo para&\#x0A;alterar o tamanho da mem\u00F3ria do despositivo plc</message>\r\n<message>funcionando agora (SwingWorker)</message>\r\n<message>adicionado classe KModbus</message>\r\n<message>teste com lib ok</message>\r\n<message>backup</message>\r\n<message>melhoria</message>\r\n<message>IconSet</message>\r\n<message>Jamod</message>\r\n</messages>
+eclipse.preferences.version=1
+org.eclipse.egit.ui.githistorypage.showallfilter=SHOWALLREPO
+resourcehistory_compare_mode=true
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300
+show_initial_config_dialog=false

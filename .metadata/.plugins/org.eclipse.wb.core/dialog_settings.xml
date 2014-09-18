@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.wb.internal.core.model.util.RenameConvertSupport$RenameDialog">
+		<item value="438" key="width"/>
+		<item value="741" key="x"/>
+		<item value="404" key="y"/>
+		<item value="244" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.util.ExposeComponentSupport$ExposeDialog">
+		<item value="438" key="width"/>
+		<item value="741" key="x"/>
+		<item value="404" key="y"/>
+		<item value="244" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.util.factory.FactoryCreateAction$FactoryCreateDialog">
+		<item value="788" key="width"/>
+		<item value="566" key="x"/>
+		<item value="177" key="y"/>
+		<item value="695" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.palette.dialogs.ComponentAddDialog">
+		<item value="533" key="width"/>
+		<item value="693" key="x"/>
+		<item value="355" key="y"/>
+		<item value="342" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.errors.report2.CreateReportDialog">
+		<item value="448" key="width"/>
+		<item value="736" key="x"/>
+		<item value="375" key="y"/>
+		<item value="302" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.property.order.ReorderDialog">
+		<item value="433" key="width"/>
+		<item value="743" key="x"/>
+		<item value="368" key="y"/>
+		<item value="315" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.actions.errors.ErrorsDialog">
+		<item value="512" key="x"/>
+		<item value="575" key="width"/>
+		<item value="149" key="y"/>
+		<item value="574" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.util.ExposePropertySupport$ExposePropertyAction$ExposeDialog">
+		<item value="447" key="width"/>
+		<item value="736" key="x"/>
+		<item value="336" key="y"/>
+		<item value="380" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.nls.ui.NlsDialog">
+		<item value="960" key="width"/>
+		<item value="480" key="x"/>
+		<item value="263" key="y"/>
+		<item value="526" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.actions.assistant.LayoutAssistantWindow">
+		<item value="933" key="x"/>
+		<item value="477" key="y"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.palette.dialogs.CategoryAddDialog">
+		<item value="450" key="width"/>
+		<item value="735" key="x"/>
+		<item value="345" key="y"/>
+		<item value="362" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.property.editor.string.StringPropertyDialog">
+		<item value="438" key="width"/>
+		<item value="741" key="x"/>
+		<item value="375" key="y"/>
+		<item value="302" key="height"/>
+	</section>
+</section>

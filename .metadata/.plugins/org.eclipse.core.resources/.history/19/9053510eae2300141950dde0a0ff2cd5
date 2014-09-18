@@ -1,0 +1,80 @@
+package cuki.proc;
+
+public abstract class Mapa {
+	// bits word0
+	public static final int saidaAutomatico = 0;
+	public static final int sBombaBooster = 1;
+	public static final int saidaBDagua = 2;
+	public static final int sAvanco = 3;
+	public static final int sRevercao = 4;
+	public static final int sUltimaTorre = 5;
+	public static final int sBombaInjetora = 6;
+	public static final int saidaSeguranca = 7;
+	public static final int sentido = 8;
+	public static final int inicioIrriga = 9;
+	public static final int desligarAlarme = 10;
+	public static final int alarmeAlinhamento = 11;
+	public static final int alarmePressao = 12;
+	public static final int picoEnergetico = 13;
+	public static final int pararIrriga = 14;
+	public static final int salvarHora = 15;
+	// mask word0
+	public static final int sentdidoMask = 1 << Mapa.sentido;
+	public static final int inicioMask = 1 << Mapa.inicioIrriga;
+	public static final int bInjetoraMask = 1 << Mapa.picoEnergetico;
+	// bits word1
+	public static final int partidaSeca = 8;
+	public static final int regimeIrrigacao = 9;
+	public static final int canhaoEn = 10;
+	public static final int FDC_En = 11;
+	public static final int voltaSeco = 12;
+	public static final int bInjetora = 13;
+	// words
+	public static final int word0 = 0;
+	public static final int word1 = 1;
+	public static final int setorAtivo = 1;
+	public static final int picoEn = 2;
+	public static final int horarioEn = 3;
+	public static final int lamina6 = 4;
+	public static final int angulo6 = 32;
+	public static final int horasRestantes = 38;
+	public static final int minutosRestantes = 39;
+	public static final int horaInicioPico = 18;
+	public static final int horaFimPico = 19;
+	public static final int anguloDeslocamento = 20;
+	public static final int distanciaDeslocamento = 21;
+	public static final int minutoIniciopico = 22;
+	public static final int minutoFimpico = 23;
+	public static final int setorAtual = 40;
+	public static final int anguloAtual = 41;
+	public static final int ano = 26;
+	public static final int mes = 116;
+	public static final int dia = 117;
+	public static final int hora = 118;
+	public static final int minuto = 119;
+	public static final int segundo = 31;
+	public static final int velUltimaTorr = 16;
+	public static final int nrSetoresCanhao = 17;
+	public static final int periodoPercentimetro = 24;
+	public static final int anguloOperacao = 25;
+	public static final int nrSetores = 42;
+	public static final int estadoIrrigacao = 43;
+	public static final int laminaAplicada = 44;
+	public static final int porcentagemAplicada = 45;
+	public static final int porcento6 = 48;
+	public static final int horaInicio6 = 54;
+	public static final int minutoInicio6 = 61;
+	public static final int horaFim6 = 68;
+	public static final int minutoFim6 = 75;
+	public static final int tempoPressao = 100;
+	public static final int laminaMinima = 102;
+	public static final int versao = 104;
+	public static final int tempoMotoBomba = 106;
+	public static final int raioUltimaTorre = 108;
+	public static final int idPivo = 120;
+	// telas
+	public static final int masterPanel = 116;
+	public static final int masterPanelLen = 14;
+	public static final int irrigarPanel = 32;
+	public static final int irrigarPanelLen = 14;
+}

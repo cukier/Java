@@ -1,0 +1,31 @@
+package cuki.to;
+
+public class MapeadorDevice {
+
+	public final static int tipoInt = 0;
+	public final static int tipoFloat = 1;
+	public final static int tipoString = 3;
+
+	public static int toTipo(int endereco) {
+		if (endereco == 92 || endereco == 108) {
+			return MapeadorDevice.tipoString;
+		} else if (endereco == 24 || endereco == 34 || endereco == 38
+				|| endereco == 48 || (endereco >= 64 && endereco <= 74)
+				|| endereco == 78 || endereco == 124 || endereco == 126
+				|| endereco == 142) {
+			return MapeadorDevice.tipoFloat;
+		} else
+			return MapeadorDevice.tipoInt;
+	}
+
+	public static int toTamanho(int endereco) {
+		int tipo = toTipo(endereco);
+		if (tipo == MapeadorDevice.tipoString)
+			return 15;
+		else if (tipo == MapeadorDevice.tipoFloat)
+			return 4;
+		else
+			return 2;
+	}
+
+}

@@ -1,0 +1,17 @@
+package cuki.proc;
+
+import net.wimpi.modbus.procimg.SimpleRegister;
+
+public class KModbus extends SynchronizedAbtractMemo implements Memo {
+
+	public KModbus(String port, int deviceAddress) {
+
+		m_port = port;
+		m_deviceAddress = deviceAddress;
+
+		m_mem = new SimpleRegister[m_qdtMemoria];
+		for (int i = 0; i < m_qdtMemoria; ++i) {
+			m_mem[i] = new SimpleRegister(0);
+		}
+	}
+}

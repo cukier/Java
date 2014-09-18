@@ -1,0 +1,34 @@
+{
+  "C:\\Program Files\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:ovrm:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Java\\jre7\\lib\\rt.jar\u0027. Neither fingerprint \u00279e0d5761b91ec31ca284362580c1e9a5ffbbe1fd\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\Clock": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\Clock",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\Clock\u0027. Skipped."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\src": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\src\u0027. Skipped."
+  },
+  "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:ovrm:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar\u0027. Neither fingerprint \u002736d1d282d74feb2ee8fadf44c737098f150d0084\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar": {
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar\u0027. Neither fingerprint \u0027af40efd1aad4e7e995500e66d8832cc4e380fce5\u0027 nor symbolic name \u0027rt\u0027 are known."
+  },
+  "D:\\Java\\KModbus\\src": {
+    "location": "D:\\Java\\KModbus\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\KModbus\\src\u0027. Skipped."
+  }
+}

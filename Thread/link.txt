@@ -1,0 +1,1 @@
+www.caelum.com.br/apostila-java-orientacao-objetos/programacao-concorrente-e-threads/#17-2-escalonador-e-trocas-de-contexto

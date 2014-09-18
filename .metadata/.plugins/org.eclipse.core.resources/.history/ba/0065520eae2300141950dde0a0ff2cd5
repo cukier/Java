@@ -1,0 +1,80 @@
+package cuki.proc;
+
+/**
+ * Interfaçe de escrita em memória do plc
+ * 
+ * @author cuki
+ *
+ */
+public interface Memo extends InputMemo {
+
+	/**
+	 * Altera a quantidade de memória máxima do dispositivo plc
+	 * 
+	 * @param size
+	 *            (<tt>int</tt>)
+	 */
+	public void setDeviceSize(int size);
+
+	/**
+	 * Seta o endereço do escravo modbus
+	 * 
+	 * @param addr
+	 */
+	public void setDeviceAddress(int addr);
+
+	/**
+	 * Envia dados do tipo inteiro ao plc
+	 * 
+	 * @param reference
+	 *            (<tt>int</tt>) posição da memória onde escrever
+	 * @param value
+	 *            (<tt>int</tt>) os valores a serem escritos
+	 * @return <tt>void</tt>
+	 */
+	public void send(int reference, int[] value);
+
+	/**
+	 * Envia um string para a memeória
+	 * 
+	 * @param value
+	 *            (<tt>String</tt>) String a ser enviada
+	 * @return <tt>void</tt>
+	 */
+	public void send(int reference, String str);
+
+	/**
+	 * Envia um nr Real para determinado endereço de memória
+	 * 
+	 * @param reference
+	 *            (<tt>int</tt>) posição da memória
+	 * @param value
+	 *            (<tt>float</tt>) nr a ser enviado
+	 * @return <tt>void</tt>
+	 */
+	public void send(int reference, float value);
+
+	/**
+	 * Envia um nr inteiro para o plc
+	 * 
+	 * @param reference
+	 *            (<tt>int</tt>) posição da memória
+	 * @param value
+	 *            (<tt>int</tt>) nr a ser enviado
+	 * @return <tt>void</tt>
+	 */
+	public void send(int reference, int value);
+
+	/**
+	 * Escreve um bit na memória
+	 * 
+	 * @param reference
+	 *            (<tt>int</tt>) posição da memória
+	 * @param index
+	 *            (<tt>int</tt>) (0 - 15) posição do bit
+	 * @param value
+	 *            (<tt>boolean</tt>) valor a ser escrito
+	 */
+	public void sendBool(int reference, int index, boolean value);
+
+}

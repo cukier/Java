@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ConfigureProjectWizard">
+		<item value="org.eclipse.egit.ui.internal.sharing.SharingWizard" key="selectedWizardId"/>
+	</section>
+	<section name="SynchronizeViewSettings">
+		<item value="1405621510981" key="lastactiveparticipant_sec_id"/>
+		<item value="org.eclipse.egit.ui.modelCompareParticipant" key="lastactiveparticipant_id"/>
+		<item value="false" key="linkWithEditor"/>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1404318534069">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1404731547221">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1405004423016">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1405105353164">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1404731580714">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1405019621325">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1395163370333">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1403528564000">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1404731694174">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1405021048484">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1403526232246">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1405621510981">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1404318687766">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1404731722542">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1405335658774">
+		</section>
+	</section>
+	<section name="SynchronizeWizard">
+	</section>
+</section>

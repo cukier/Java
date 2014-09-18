@@ -1,0 +1,184 @@
+{
+  "C:\\Program Files\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Java\\jre7\\lib\\rt.jar\u0027. Neither fingerprint \u00279e0d5761b91ec31ca284362580c1e9a5ffbbe1fd\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\jeasyopc-2.3.2\\jeasyopc.jar": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\jeasyopc-2.3.2\\jeasyopc.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\jeasyopc-2.3.2\\jeasyopc.jar\u0027. Neither fingerprint \u0027c1a0051f06835fcd46e426f9810f9467aee9c216\u0027 nor symbolic name \u0027jeasyopc\u0027 are known."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\u0027. Skipped."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\src": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\src\u0027. Skipped."
+  },
+  "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar\u0027. Neither fingerprint \u002736d1d282d74feb2ee8fadf44c737098f150d0084\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\lib\\jeasyopc.jar": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\lib\\jeasyopc.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\Pivo\\lib\\jeasyopc.jar\u0027. Neither fingerprint \u0027c1a0051f06835fcd46e426f9810f9467aee9c216\u0027 nor symbolic name \u0027jeasyopc\u0027 are known."
+  },
+  "C:\\Users\\cuki\\Desktop\\Workspace\\Teste\\src": {
+    "location": "C:\\Users\\cuki\\Desktop\\Workspace\\Teste\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\cuki\\Desktop\\Workspace\\Teste\\src\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\Pivo\\src": {
+    "location": "D:\\Eletronica\\Java\\Pivo\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\Pivo\\src\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\Teste\\src": {
+    "location": "D:\\Eletronica\\Java\\Teste\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\Teste\\src\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\Supervisorio\\src": {
+    "location": "D:\\Eletronica\\Java\\Supervisorio\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\Supervisorio\\src\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\Supervisorio\\lib\\jeasyopc.jar": {
+    "location": "D:\\Eletronica\\Java\\Supervisorio\\lib\\jeasyopc.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Eletronica\\Java\\Supervisorio\\lib\\jeasyopc.jar\u0027. Neither fingerprint \u0027c1a0051f06835fcd46e426f9810f9467aee9c216\u0027 nor symbolic name \u0027jeasyopc\u0027 are known."
+  },
+  "D:\\Eletronica\\Java\\JEasyOpc\\src\\java": {
+    "location": "D:\\Eletronica\\Java\\JEasyOpc\\src\\java",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\JEasyOpc\\src\\java\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\Janela\\src": {
+    "location": "D:\\Eletronica\\Java\\Janela\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\Janela\\src\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\Jamod\\jamod-1.2-SNAPSHOT.jar": {
+    "location": "D:\\Eletronica\\Java\\Jamod\\jamod-1.2-SNAPSHOT.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Eletronica\\Java\\Jamod\\jamod-1.2-SNAPSHOT.jar\u0027. Neither fingerprint \u0027fb543826072663fb91a508d07b63fb4bd1e034f2\u0027 nor symbolic name \u0027jamod-1.2-SNAPSHOT\u0027 are known."
+  },
+  "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar": {
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar\u0027. Neither fingerprint \u0027af40efd1aad4e7e995500e66d8832cc4e380fce5\u0027 nor symbolic name \u0027rt\u0027 are known."
+  },
+  "D:\\Eletronica\\Java\\Jamod\\src": {
+    "location": "D:\\Eletronica\\Java\\Jamod\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\Jamod\\src\u0027. Skipped."
+  },
+  "D:\\Eletronica\\Java\\NewThread\\src": {
+    "location": "D:\\Eletronica\\Java\\NewThread\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Eletronica\\Java\\NewThread\\src\u0027. Skipped."
+  },
+  "D:\\Java\\Jamod\\src": {
+    "location": "D:\\Java\\Jamod\\src",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Jamod\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027null\u0027 are known."
+  },
+  "D:\\Java\\Jamod\\jamod-1.2-SNAPSHOT.jar": {
+    "location": "D:\\Java\\Jamod\\jamod-1.2-SNAPSHOT.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Jamod\\jamod-1.2-SNAPSHOT.jar\u0027. Neither fingerprint \u0027fb543826072663fb91a508d07b63fb4bd1e034f2\u0027 nor symbolic name \u0027jamod-1.2-SNAPSHOT\u0027 are known."
+  },
+  "D:\\Java\\Jamod\\comm-2.0.jar": {
+    "location": "D:\\Java\\Jamod\\comm-2.0.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Jamod\\comm-2.0.jar\u0027. Neither fingerprint \u0027e1cffe12249ca60d0a6ab6772c632df9942ab417\u0027 nor symbolic name \u0027comm-2.0\u0027 are known."
+  },
+  "D:\\Java\\Supervisorio\\src": {
+    "location": "D:\\Java\\Supervisorio\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\Supervisorio\\src\u0027. Skipped."
+  },
+  "D:\\Java\\Supervisorio\\jamod-1.2-SNAPSHOT.jar": {
+    "location": "D:\\Java\\Supervisorio\\jamod-1.2-SNAPSHOT.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Supervisorio\\jamod-1.2-SNAPSHOT.jar\u0027. Neither fingerprint \u0027fb543826072663fb91a508d07b63fb4bd1e034f2\u0027 nor symbolic name \u0027jamod-1.2-SNAPSHOT\u0027 are known."
+  },
+  "D:\\Java\\Jamod\\bin": {
+    "location": "D:\\Java\\Jamod\\bin",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\Jamod\\bin\u0027. Skipped."
+  },
+  "D:\\Java\\Swing\\src": {
+    "location": "D:\\Java\\Swing\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\Swing\\src\u0027. Skipped."
+  },
+  "D:\\Java\\IconSet\\src": {
+    "location": "D:\\Java\\IconSet\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\IconSet\\src\u0027. Skipped."
+  },
+  "D:\\Java\\SupervisorioRadio\\src": {
+    "location": "D:\\Java\\SupervisorioRadio\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\SupervisorioRadio\\src\u0027. Skipped."
+  },
+  "D:\\Java\\IconSet\\bin": {
+    "location": "D:\\Java\\IconSet\\bin",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\IconSet\\bin\u0027. Skipped."
+  },
+  "D:\\Java\\KModbus\\bin": {
+    "location": "D:\\Java\\KModbus\\bin",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\KModbus\\bin\u0027. Skipped."
+  },
+  "D:\\Java\\Jamod\\lib\\comm-2.0.jar": {
+    "location": "D:\\Java\\Jamod\\lib\\comm-2.0.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Jamod\\lib\\comm-2.0.jar\u0027. Neither fingerprint \u0027e1cffe12249ca60d0a6ab6772c632df9942ab417\u0027 nor symbolic name \u0027comm-2.0\u0027 are known."
+  },
+  "D:\\Java\\KModbus\\src": {
+    "location": "D:\\Java\\KModbus\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\KModbus\\src\u0027. Skipped."
+  },
+  "D:\\Java\\NewThread\\src": {
+    "location": "D:\\Java\\NewThread\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\NewThread\\src\u0027. Skipped."
+  },
+  "D:\\Java\\Pivo\\Lib\\jamod-1.2-SNAPSHOT.jar": {
+    "location": "D:\\Java\\Pivo\\Lib\\jamod-1.2-SNAPSHOT.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Pivo\\Lib\\jamod-1.2-SNAPSHOT.jar\u0027. Neither fingerprint \u0027fb543826072663fb91a508d07b63fb4bd1e034f2\u0027 nor symbolic name \u0027jamod-1.2-SNAPSHOT\u0027 are known."
+  },
+  "D:\\Java\\Pivo\\src": {
+    "location": "D:\\Java\\Pivo\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\Pivo\\src\u0027. Skipped."
+  },
+  "D:\\Java\\Jamod\\lib\\RXTXcomm.jar": {
+    "location": "D:\\Java\\Jamod\\lib\\RXTXcomm.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\Jamod\\lib\\RXTXcomm.jar\u0027. Neither fingerprint \u002784edeb2998a908bc87dd664bc229f2aabc9e11fb\u0027 nor symbolic name \u0027RXTXcomm\u0027 are known."
+  },
+  "D:\\Java\\KModbus\\Lib\\RXTXcomm.jar": {
+    "location": "D:\\Java\\KModbus\\Lib\\RXTXcomm.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027D:\\Java\\KModbus\\Lib\\RXTXcomm.jar\u0027. Neither fingerprint \u002784edeb2998a908bc87dd664bc229f2aabc9e11fb\u0027 nor symbolic name \u0027RXTXcomm\u0027 are known."
+  },
+  "D:\\Java\\Super\\src": {
+    "location": "D:\\Java\\Super\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Java\\Super\\src\u0027. Skipped."
+  }
+}

@@ -1,0 +1,14 @@
+package cuki;
+
+import cuki.OpcConn;
+
+public class Teste {
+
+	private static OpcConn conector;
+
+	public static void main(String[] args) {
+		conector.connect();
+
+	}
+
+}

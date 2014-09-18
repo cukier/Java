@@ -1,0 +1,16 @@
+package cuki;
+
+import cuki.OpcConn;
+
+public class Teste {
+
+	private static OpcConn conector = new OpcConn();
+
+	public static void main(String[] args) {
+		try {
+			conector.connect();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
